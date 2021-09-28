@@ -15,6 +15,7 @@ jobs:
       - name: Fetch latest data
         run: |-
           curl -O "https://www1.nyc.gov/assets/nypd/downloads/pdf/public_information/public-pguide[1-3].pdf"
+          curl -O https://www1.nyc.gov/assets/nypd/downloads/pdf/public_information/public-adminguide1.pdf
           curl -O https://www1.nyc.gov/assets/nypd/downloads/pdf/public_information/Update.pdf
       - name: Commit and push if it changed
         run: |-
