@@ -6,7 +6,7 @@ allows the viewing of historical Patrol Guides, as well as seeing the
 differences between versions of the Patrol Guide.
 
 The NYPD Patrol Guide is available at
-https://www1.nyc.gov/site/nypd/about/about-nypd/patrol-guide.page
+https://www1.nyc.gov/site/nypd/about/about-nypd/manual.page
 
 This history starts on March 6, 2021.
 
