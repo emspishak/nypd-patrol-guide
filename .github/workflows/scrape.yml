@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch latest data
         run: |-
-          curl -O "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/public-pguide[1-4].pdf"
-          curl -O "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/public-adminguide[1-2].pdf"
-          curl -O "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/toc1.pdf"
+          curl -O --user-agent UA "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/public-pguide[1-4].pdf"
+          curl -O --user-agent UA "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/public-adminguide[1-2].pdf"
+          curl -O --user-agent UA "https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/toc1.pdf"
           rm update.pdf Update.pdf Update1.pdf || true
-          curl --fail -O https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/update.pdf || true
-          curl --fail -O https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/Update.pdf || true
-          curl --fail -O https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/Update1.pdf || true
+          curl --fail -O --user-agent UA https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/update.pdf || true
+          curl --fail -O --user-agent UA https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/Update.pdf || true
+          curl --fail -O --user-agent UA https://www.nyc.gov/assets/nypd/downloads/pdf/public_information/Update1.pdf || true
           test -f update.pdf -o -f Update.pdf -o -f Update1.pdf
       - name: Commit and push if it changed
         run: |-
